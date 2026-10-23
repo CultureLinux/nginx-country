@@ -1,6 +1,6 @@
 # nginx-country
 
-Outil Python en préparation pour récupérer et comparer les listes IP par pays d'IPverse et d'IPdeny, puis générer des règles Nginx. Une collecte expérimentale de tous les pays ou par pays est disponible ; la commande `nginx-country`, la comparaison et le déploiement ne sont pas encore implémentés.
+Outil Python en préparation pour récupérer et comparer les listes IP par pays d'IPverse et d'IPdeny, puis générer des règles Nginx. La collecte et la génération expérimentales sont disponibles ; la commande installable `nginx-country`, la comparaison et le déploiement restent à développer.
 
 ## Flux de traitement
 
@@ -10,15 +10,15 @@ Le projet prévoit deux flux indépendants, un par fournisseur :
 IPverse ─┐
          ├─> collecte et contrôles ─> données brutes par source
 IPdeny ──┘                              │
-                                       ├─> normalisation des CIDR          [à développer]
-                                       ├─> génération des règles Nginx    [à développer]
+                                       ├─> normalisation des CIDR          [disponible]
+                                       ├─> génération des règles Nginx    [disponible]
                                        ├─> comparaison et rapports        [à développer]
                                        └─> validation et déploiement      [à développer]
 ```
 
-Aujourd'hui, seule la collecte expérimentale est disponible. Elle télécharge les données de chaque source, vérifie leur structure et conserve les fichiers et leurs métadonnées. Une collecte complète réussie met à jour un lien par source ; en cas d'erreur, le lien précédent est conservé et l'autre source reste traitée. Ces liens désignent les données collectées : ils n'activent aucune configuration Nginx.
+La collecte et la génération sont expérimentales. Elle télécharge les données de chaque source, vérifie leur structure et conserve les fichiers et leurs métadonnées. Une collecte complète réussie met à jour un lien par source ; en cas d'erreur, le lien précédent est conservé et l'autre source reste traitée. Ces liens désignent les données collectées : ils n'activent aucune configuration Nginx.
 
-La normalisation regroupera et triera les plages par pays et famille IP. La génération produira ensuite des fichiers `XX-allow.conf` et `XX-deny.conf` séparés par fournisseur. La comparaison permettra d'examiner les écarts avant de choisir explicitement une source. Enfin, la validation et le déploiement prévus devront tester la configuration Nginx et permettre un retour arrière ; le déploiement automatique restera désactivé par défaut.
+La normalisation regroupe et trie les plages par pays et famille IP. La génération produit des fichiers `XX-allow.conf` et `XX-deny.conf` séparés par fournisseur. La comparaison permettra d'examiner les écarts avant de choisir explicitement une source. Enfin, la validation et le déploiement prévus devront tester la configuration Nginx et permettre un retour arrière ; le déploiement automatique restera désactivé par défaut.
 
 ## Prérequis
 
@@ -98,6 +98,32 @@ PYTHONPATH=src python3 -m nginx_country --help
 ```
 
 Dans le répertoire de sortie, `ipverse/all` et `ipdeny/all` sont des liens vers les dernières collectes complètes retenues. Les collectes par pays utilisent des liens tels que `ipverse/FR` et `ipdeny/FR`. Chaque répertoire de collecte contient les fichiers bruts et un `metadata.json` avec leur provenance et leurs empreintes. Une tentative incomplète peut laisser des fichiers dans un répertoire `all-<identifiant>` sans mettre à jour le lien `all`.
+
+## Générer les règles Nginx
+
+Depuis la racine, après une collecte complète retenue :
+
+```bash
+PYTHONPATH=src python3 -m nginx_country generate
+```
+
+Les données sont lues depuis `data/raw/<source>/all`. Les anciennes collectes dont le manifeste ne prouve pas les contrôles actuels sont refusées : relancer la collecte pour cette source. Les sources sont traitées indépendamment ; le code de sortie est `1` si au moins une source échoue, même si l'autre a été générée.
+
+Les règles se trouvent dans `generated/ipverse/latest/` et `generated/ipdeny/latest/`, liens vers les dernières générations réussies. Pour chaque pays ISO, on obtient `XX-allow.conf` et `XX-deny.conf`, avec les mêmes CIDR normalisés. Le manifeste `manifest.json` indique notamment les familles absentes ou vides, les catégories non ISO ignorées, les recouvrements entre pays, les plages particulières détectées et les empreintes des entrées. Les versions précédentes sont conservées. `generated/` est ignoré par Git.
+
+Pour simuler les contrôles sans écrire de fichiers :
+
+```bash
+PYTHONPATH=src python3 -m nginx_country generate --dry-run
+```
+
+Pour modifier les chemins ou exclure les plages particulières de la liste du programme :
+
+```bash
+PYTHONPATH=src python3 -m nginx_country generate --input data/raw --output generated --special exclude
+```
+
+Par défaut `--special keep` conserve ces plages et les signale. La liste explicite utilisée est dans `src/nginx_country/normalize.py` ; elle couvre les principales plages privées, locales, documentaires et réservées, sans prétendre couvrir tous les registres de plages spéciales. Avec `exclude`, les intersections sont retirées et consignées dans le manifeste. Cette génération reste expérimentale et ne valide ni ne recharge Nginx.
 
 ## Commandes de test
 
