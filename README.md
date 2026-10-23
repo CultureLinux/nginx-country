@@ -1,167 +1,88 @@
 # nginx-country
 
-Outil Python en préparation pour récupérer et comparer les listes IP par pays d'IPverse et d'IPdeny, puis générer des règles Nginx. La collecte et la génération expérimentales sont disponibles ; la commande installable `nginx-country`, le rapport historique et le déploiement restent à développer.
+Outil Python expérimental qui collecte les plages IP par pays d'IPverse et d'IPdeny, génère des règles Nginx distinctes et compare les couvertures. Il ne déploie ni ne recharge Nginx.
 
-## Flux de traitement
+## Flux et commandes
 
-Le projet prévoit deux flux indépendants, un par fournisseur :
-
-```text
-IPverse ─┐
-         ├─> collecte et contrôles ─> données brutes par source
-IPdeny ──┘                              │
-                                       ├─> normalisation des CIDR          [disponible]
-                                       ├─> génération des règles Nginx    [disponible]
-                                       ├─> comparaison JSON              [disponible]
-                                       └─> validation et déploiement      [à développer]
-```
-
-La collecte et la génération sont expérimentales. Elle télécharge les données de chaque source, vérifie leur structure et conserve les fichiers et leurs métadonnées. Une collecte complète réussie met à jour un lien par source ; en cas d'erreur, le lien précédent est conservé et l'autre source reste traitée. Ces liens désignent les données collectées : ils n'activent aucune configuration Nginx.
-
-La normalisation regroupe et trie les plages par pays et famille IP. La génération produit des fichiers `XX-allow.conf` et `XX-deny.conf` séparés par fournisseur. La comparaison permet d'examiner les écarts avant de choisir explicitement une source. Enfin, la validation et le déploiement prévus devront tester la configuration Nginx et permettre un retour arrière ; le déploiement automatique restera désactivé par défaut.
-
-## Prérequis
-
-- Python 3 avec le module `venv` et `pip` ; l'environnement actuel a été créé avec Python 3.9.25.
-- Un accès HTTPS à GitHub et à IPdeny est nécessaire pour la collecte ; les tests unitaires fonctionnent hors ligne.
-
-Sur Rocky Linux 9, installer Python si nécessaire :
+Prérequis : Python 3.9 ou supérieur et un accès HTTPS pour la collecte. Depuis la racine du projet :
 
 ```bash
-sudo dnf install python3
-```
-
-## Préparer l'environnement de développement
-
-Depuis la racine du projet :
-
-```bash
-python3 --version
-python3 -m venv .venv
-source .venv/bin/activate
-python --version
-python -m pip --version
-```
-
-L'environnement `.venv/` est local au projet et ignoré par Git. L'activation s'applique au terminal courant ; pour un nouveau terminal, reprendre uniquement la commande `source .venv/bin/activate` depuis la racine du projet. Pour le quitter :
-
-```bash
-deactivate
-```
-
-Il n'y a pas encore de dépendances externes ni de paquet à installer.
-
-## Commandes de récupération
-
-### Tous les pays
-
-Depuis la racine du projet :
-
-```bash
+# Récupérer tous les pays ; IPdeny peut prendre plusieurs minutes.
 PYTHONPATH=src python3 -m nginx_country
-```
 
-La commande parcourt les inventaires publiés par chaque source, télécharge les fichiers et conserve les données brutes dans `data/raw/ipverse/all/` et `data/raw/ipdeny/all/`. Les sources sont traitées indépendamment ; un échec renvoie un code non nul et conserve le lien vers la précédente collecte de cette source. La collecte IPdeny attend une seconde entre les téléchargements et peut prendre plusieurs minutes. Les fichiers partiels restent dans un répertoire de travail daté par identifiant.
+# Ou récupérer un seul pays.
+PYTHONPATH=src python3 -m nginx_country FR
 
-Les métadonnées distinguent les pays ISO des codes spéciaux. IPverse utilise une révision Git fixe et vérifie chaque empreinte Git ; IPdeny vérifie les empreintes MD5 de son manifeste IPv4. Une liste IPv4 `AP` vide est conservée uniquement si ce manifeste confirme son empreinte ; les autres listes vides sont rejetées. Les fichiers de la collecte précédente ne doivent pas disparaître. La première collecte ne dispose pas de référence historique, et IPdeny ne fournit pas ici de manifeste IPv6 ni de révision cohérente entre ses fichiers. Les contrôles de variation de couverture restent à faire : ces données ne sont pas prêtes pour un déploiement en production.
-
-### Un seul pays
-
-Après activation du venv, depuis la racine :
-
-```bash
-PYTHONPATH=src python -m nginx_country FR
-```
-
-Remplacer `FR` par le code à deux lettres voulu. Les réponses et leurs métadonnées sont stockées dans `data/raw/`, ignoré par Git ; `--output CHEMIN` permet de choisir un autre répertoire. Les deux sources sont traitées indépendamment et une erreur renvoie un code de sortie non nul. Chaque collecte réussie crée un répertoire daté par ses métadonnées et met à jour un lien vers cette version ; une collecte échouée conserve la précédente.
-
-La commande par pays vérifie la syntaxe et la famille des CIDR, mais ne garantit pas la complétude des données reçues ni la validité ISO du code ; elle ne constitue pas un jeu prêt pour la production. Les listes IPdeny vides sont rejetées, y compris lorsqu'une famille pourrait légitimement être absente. La CLI définitive reste à développer.
-
-### Répertoire de sortie et résultat
-
-Pour enregistrer une collecte complète ailleurs que dans `data/raw/` :
-
-```bash
-PYTHONPATH=src python3 -m nginx_country --output /chemin/vers/donnees
-```
-
-La même option fonctionne pour un pays :
-
-```bash
-PYTHONPATH=src python3 -m nginx_country FR --output /chemin/vers/donnees
-```
-
-La commande affiche un résultat pour chaque fournisseur à la fin. Elle renvoie `0` si les deux collectes réussissent et `1` si au moins une échoue. Une erreur d'arguments renvoie `2`. Pour afficher les options disponibles :
-
-```bash
-PYTHONPATH=src python3 -m nginx_country --help
-```
-
-Dans le répertoire de sortie, `ipverse/all` et `ipdeny/all` sont des liens vers les dernières collectes complètes retenues. Les collectes par pays utilisent des liens tels que `ipverse/FR` et `ipdeny/FR`. Chaque répertoire de collecte contient les fichiers bruts et un `metadata.json` avec leur provenance et leurs empreintes. Une tentative incomplète peut laisser des fichiers dans un répertoire `all-<identifiant>` sans mettre à jour le lien `all`.
-
-## Générer les règles Nginx
-
-Depuis la racine, après une collecte complète retenue :
-
-```bash
+# Générer les règles des deux sources à partir des collectes retenues.
 PYTHONPATH=src python3 -m nginx_country generate
-```
 
-Les données sont lues depuis `data/raw/<source>/all`. Les anciennes collectes dont le manifeste ne prouve pas les contrôles actuels sont refusées : relancer la collecte pour cette source. Les sources sont traitées indépendamment ; le code de sortie est `1` si au moins une source échoue, même si l'autre a été générée.
-
-Les règles se trouvent dans `generated/ipverse/latest/` et `generated/ipdeny/latest/`, liens vers les dernières générations réussies. Pour chaque pays ISO, on obtient `XX-allow.conf` et `XX-deny.conf`, avec les mêmes CIDR normalisés. Le manifeste `manifest.json` indique notamment les familles absentes ou vides, les catégories non ISO ignorées, les recouvrements entre pays, les plages particulières détectées et les empreintes des entrées. Les versions précédentes sont conservées. `generated/` est ignoré par Git.
-
-Pour simuler les contrôles sans écrire de fichiers :
-
-```bash
-PYTHONPATH=src python3 -m nginx_country generate --dry-run
-```
-
-Pour modifier les chemins ou exclure les plages particulières de la liste du programme :
-
-```bash
-PYTHONPATH=src python3 -m nginx_country generate --input data/raw --output generated --special exclude
-```
-
-Par défaut `--special keep` conserve ces plages et les signale. La liste explicite utilisée est dans `src/nginx_country/normalize.py` ; elle couvre les principales plages privées, locales, documentaires et réservées, sans prétendre couvrir tous les registres de plages spéciales. Avec `exclude`, les intersections sont retirées et consignées dans le manifeste. Cette génération reste expérimentale et ne valide ni ne recharge Nginx.
-
-## Comparer les deux générations
-
-Pour comparer tous les pays des deux générations `latest` :
-
-```bash
-PYTHONPATH=src python3 -m nginx_country compare
-```
-
-Pour un pays précis ou un répertoire de générations différent :
-
-```bash
-PYTHONPATH=src python3 -m nginx_country compare --country FR
-PYTHONPATH=src python3 -m nginx_country compare --input generated --country FR
-```
-
-Le résultat JSON est affiché dans le terminal. Pour le conserver :
-
-```bash
+# Comparer tous les pays ou seulement la France ; la sortie est en JSON.
 PYTHONPATH=src python3 -m nginx_country compare > comparaison.json
-```
+PYTHONPATH=src python3 -m nginx_country compare --country FR
 
-Par pays et famille, le résultat donne les nombres de préfixes et d'adresses, l'intersection, l'union, les couvertures propres à chaque source, l'indice de Jaccard et jusqu'à dix des plus grands CIDR exclusifs de chaque source. Les comptes sont des entiers exacts, y compris en IPv6 ; l'indice est une approximation décimale. Si l'union est vide, Jaccard vaut `null`. Une famille absente est indiquée comme telle et sa comparaison vaut `null`, sans supposer une couverture vide. La commande vérifie les empreintes des règles et exige la même politique de plages spéciales. Elle retourne un code non nul en cas de données absentes ou invalides. Le rapport historique et les exports Markdown restent à développer.
-
-## Commandes de test
-
-Depuis la racine du projet, exécuter toute la suite de tests unitaires hors ligne :
-
-```bash
+# Exécuter les tests hors ligne.
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-Ces tests utilisent des données synthétiques et des réponses réseau simulées. Ils vérifient notamment la validation des données, l'indépendance des sources, le traitement d'une zone vide et les contrôles d'inventaire. Ils ne téléchargent pas les données des fournisseurs et ne valident pas une configuration Nginx. Pour vérifier l'accès réel aux fournisseurs, lancer une commande de récupération ci-dessus ; elle écrit les données dans le répertoire de sortie.
+Les données brutes sont sous `data/raw/<source>/all/` et les règles sous `generated/<source>/latest/`. Ces liens pointent vers les dernières versions retenues ; chaque source est traitée indépendamment et une erreur conserve sa version précédente. Les données et les règles générées sont ignorées par Git. Les commandes renvoient un code non nul si une source échoue.
 
-## Documentation du projet
+La collecte vérifie les CIDR, les empreintes Git IPverse et le manifeste IPv4 IPdeny. Une collecte précédente sans les métadonnées requises doit être renouvelée avant génération. Le générateur conserve les plages particulières par défaut ; `generate --special exclude` retire celles de la liste versionnée du programme et les signale. `generate --dry-run` effectue une simulation. La liste des plages particulières n'est pas exhaustive. Les codes non ISO restent dans les données brutes et ne deviennent pas des fichiers pays.
 
-- [Cahier des charges](nginx-country-cahier-des-charges.md) : objectifs et exigences.
-- [Découpage en lots](AGENT.md) : étapes, dépendances et critères de validation.
-- [Cadrage des sources](docs/cadrage-sources.md) : recherches effectuées et points à vérifier.
+La comparaison vérifie les empreintes des règles et exige des politiques de génération identiques. Elle calcule l'intersection, l'union et les différences d'adresses, et distingue une famille absente d'une famille vide. Les comptes IPv6 sont des entiers exacts ; l'indice de Jaccard est une approximation décimale. Consulter `--help` après `generate` ou `compare` pour les options de chemins. Le [cadrage des sources](docs/cadrage-sources.md) décrit les limites de collecte et les conditions d'utilisation.
 
-Le déploiement automatique est prévu désactivé par défaut ; aucune activation sur un serveur réel ne doit être effectuée sans validation explicite. Les données par pays ne garantissent pas la localisation réelle des utilisateurs et leur utilisation peut bloquer des utilisateurs légitimes.
+## Résultats statistiques et qualité des données
+
+**Instantané étudié :** comparaison des générations du 23 octobre 2026, politique `keep`, 249 pays ou territoires. Les identifiants des générations et l'empreinte du fichier d'entrée sont conservés dans [statistiques.json](docs/figures/statistiques.json). Ces résultats et les figures sont un instantané : ils ne changent pas automatiquement avec les prochaines collectes.
+
+**La qualité géographique ne peut pas être notée à partir de ces deux listes seules.** Leur accord mesure leur cohérence mutuelle, pas la proportion d'utilisateurs réellement situés dans le pays : les deux fournisseurs peuvent partager une même erreur. Une estimation de l'exactitude, des faux positifs et des faux négatifs nécessite une référence indépendante avec localisation connue, représentative du trafic et datée. Les plages par pays ne garantissent pas la localisation réelle ; des utilisateurs légitimes peuvent être bloqués.
+
+| Indicateur descriptif | IPv4 | IPv6 |
+|---|---:|---:|
+| Pays comparables | 240 / 249 | 232 / 249 |
+| Famille absente d'au moins une source | 9 | 17 |
+| Jaccard médian par pays | 90,5 % | 93,7 % |
+| Jaccard moyen par pays | 81,4 % | 84,6 % |
+| Pays avec Jaccard inférieur à 50 % | 26 / 240 | 22 / 232 |
+
+Jaccard = taille de l'intersection / taille de l'union. La moyenne et la médiane donnent le même poids à chaque pays, sans pondération par adresses ou trafic ; une union vide est exclue du calcul, comme les familles absentes. Les chiffres décrivent les données disponibles, sans intervalle de confiance ni estimation de l'exactitude. L'IPv6 mesure un espace d'adressage, pas un nombre d'utilisateurs.
+
+![Distribution du Jaccard par pays en IPv4 et IPv6](docs/figures/accord-pays.png)
+
+La distribution révèle une dispersion importante : le bon accord médian ne doit pas masquer les pays très divergents. Le graphique ci-dessous sélectionne les dix accords les plus faibles par famille, parmi les familles comparables ; un petit territoire pèse autant qu'un grand.
+
+![Pays avec les accords les plus faibles](docs/figures/accords-faibles.png)
+
+### France
+
+| Mesure | IPv4 | IPv6 |
+|---|---:|---:|
+| Jaccard | 89,34 % | 95,18 % |
+| Adresses IPv4 communes | 76 544 096 | — |
+| Adresses IPv4 exclusives IPverse | 4 085 248 | — |
+| Adresses IPv4 exclusives IPdeny | 5 043 696 | — |
+
+![Répartition de la couverture française](docs/figures/france-couverture.png)
+
+Les pourcentages du graphique utilisent **l'union** comme dénominateur. En IPv4, les écarts représentent respectivement 5,07 % de la liste IPverse et 6,18 % de la liste IPdeny si l'on utilise chaque liste comme dénominateur. Ces mesures ne sont pas des taux d'erreur. Les manifestes de cet instantané signalent 1 712 entrées de recouvrement IPv4 entre la France et d'autres pays chez IPverse, deux en IPv6, et aucune chez IPdeny ; il s'agit de CIDR signalés, pas de comptages d'utilisateurs ou de plages nécessairement indépendantes.
+
+**Évaluation des dimensions de qualité :**
+
+- **Intégrité technique :** des contrôles de syntaxe et d'empreinte existent ; ils détectent des altérations, pas des erreurs géographiques à la source.
+- **Disponibilité :** des familles sont absentes du jeu IPdeny pour certains pays ; absence ne signifie pas couverture vide. L'inventaire mondial n'est pas prouvé complet.
+- **Cohérence :** l'accord entre fournisseurs varie fortement ; les recouvrements entre pays et les divergences françaises justifient un examen ciblé.
+- **Fraîcheur :** cet instantané ne mesure pas la stabilité dans le temps. Les deux sources ne sont pas nécessairement produites au même instant ; IPdeny ne fournit pas ici de révision atomique ni de manifeste IPv6.
+- **Validité et impact opérationnel : inconnus.** Pour les estimer, constituer un échantillon indépendant d'adresses avec pays et date de référence, stratifié par pays, famille, fournisseur d'accès et cas d'accord/désaccord ; mesurer faux positifs et faux négatifs par source et famille, avec intervalles d'incertitude et pondération selon le trafic réel. Vérifier aussi les plages divergentes et les recouvrements sur des cas représentatifs. Ne pas assimiler une plage plus grande à une source plus fiable.
+
+### Reproduire les graphiques
+
+La collecte, la génération et les tests utilisent la bibliothèque standard. Les graphiques demandent en plus Matplotlib dans l'environnement choisi :
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install 'matplotlib>=3.9,<4'
+PYTHONPATH=src python -m nginx_country compare > comparaison.json
+python scripts/statistics_report.py --input comparaison.json --output docs/figures
+```
+
+Le script produit trois PNG et un fichier de statistiques avec l'empreinte de l'entrée. Il attend une comparaison complète incluant la France et ses deux familles comparables. Après une nouvelle exécution, actualiser aussi les chiffres et la date de cette section avant de publier le README.

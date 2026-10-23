@@ -1,0 +1,29 @@
+{
+  "input_sha256": "7464d9ce5a249ce94a266908cec93bf20f46778577158b08b7e4b1f8ecb46cfd",
+  "generations": {
+    "ipverse": "generation-6a6d2023f8f4404ebb6d986792ba4e01",
+    "ipdeny": "generation-030b807248ea477382330aac4c8fffee"
+  },
+  "policy": "keep",
+  "countries": 249,
+  "families": {
+    "ipv4": {
+      "count": 240,
+      "missing": 9,
+      "undefined": 0,
+      "mean": 0.8138333042721116,
+      "median": 0.9054335473130461,
+      "below_half": 26,
+      "at_least_90": 125
+    },
+    "ipv6": {
+      "count": 232,
+      "missing": 17,
+      "undefined": 0,
+      "mean": 0.8463679943365007,
+      "median": 0.9372379888237994,
+      "below_half": 22,
+      "at_least_90": 144
+    }
+  }
+}
