@@ -1,0 +1,6 @@
+.agents
+.venv/
+data/
+__pycache__/
+nginx-country-cahier-des-charges.md
+AGENT.md
