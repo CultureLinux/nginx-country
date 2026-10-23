@@ -1,0 +1,4512 @@
+{
+  "format": "nginx-country-combined-v1",
+  "generated_at": "2026-10-23T14:15:20.240231+00:00",
+  "policy": "keep",
+  "rule": {
+    "allow": "union",
+    "deny": "intersection"
+  },
+  "sources": {
+    "ipverse": {
+      "generation": "generation-6a6d2023f8f4404ebb6d986792ba4e01",
+      "generated_at": "2026-10-23T13:27:53.437748+00:00"
+    },
+    "ipdeny": {
+      "generation": "generation-030b807248ea477382330aac4c8fffee",
+      "generated_at": "2026-10-23T13:28:07.259229+00:00"
+    }
+  },
+  "geolite": {
+    "archive": "GeoLite2-Country-CSV_20261020.zip",
+    "sha256": "f3d2a8626e8f14cffa862f17f751307184bb605f6664ba0f8dbb62c58f561aa9",
+    "country_field": "geoname_id",
+    "unknown_blocks": {
+      "ipv4": 1344,
+      "ipv6": 918
+    }
+  },
+  "countries": {
+    "AD": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AQ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AX": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "AZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BB": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BD": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BH": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BJ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BQ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BV": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "BW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "BZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "empty",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "CD": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "CG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CH": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CV": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CX": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "empty",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "CY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "CZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "DE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "DJ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "DK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "DM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "DO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "DZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "EC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "EE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "EG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "EH": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "empty",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "ER": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "ES": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "ET": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "FI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "FJ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "FK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "FM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "FO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "FR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GB": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GD": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GH": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GP": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GQ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GS": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "GT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "GY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "HK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "HM": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "empty",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "HN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "HR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "HT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "HU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "ID": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IQ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "IT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "JE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "JM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "JO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "JP": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KH": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KP": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "KR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "KZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LB": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LV": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "LY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MD": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "ME": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MH": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "ML": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MP": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MQ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "MT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MV": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MX": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "MZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NP": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "NZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "OM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PH": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PN": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "PR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "PY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "QA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "RE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "RO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "RS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "RU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "RW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SB": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SD": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SH": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "empty",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "SI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SJ": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "SK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "ST": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SV": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SX": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "SZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TD": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TF": {
+      "ipv4": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "empty",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "TG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TH": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TJ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TK": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TL": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TO": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TR": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TV": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "TZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "UA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "UG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "UM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "US": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "UY": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "UZ": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "VA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "VC": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "VE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "VG": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "VI": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "VN": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "VU": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "WF": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "WS": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "YE": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "YT": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "incomplete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "absent",
+          "geolite": "present"
+        }
+      }
+    },
+    "ZA": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "ZM": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    },
+    "ZW": {
+      "ipv4": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      },
+      "ipv6": {
+        "status": "complete",
+        "sources": {
+          "ipverse": "present",
+          "ipdeny": "present",
+          "geolite": "present"
+        }
+      }
+    }
+  }
+}

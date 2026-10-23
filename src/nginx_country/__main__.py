@@ -6,6 +6,22 @@ from .fetch import collect, collect_all
 
 
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == 'build-combined':
+        from .combined import build_combined
+        from zipfile import BadZipFile
+        parser = argparse.ArgumentParser(description='Générer les règles combinées expérimentales')
+        parser.add_argument('--input', type=Path, default=Path('generated'))
+        parser.add_argument('--geolite', type=Path, required=True)
+        parser.add_argument('--output', type=Path, default=Path('nginx-country'))
+        args = parser.parse_args(sys.argv[2:])
+        try:
+            result = build_combined(args.input, args.geolite, args.output)
+        except (OSError, ValueError, KeyError, TypeError, BadZipFile) as exc:
+            print(f'génération impossible : {exc}', file=sys.stderr)
+            return 1
+        incomplete = sum(states[f]['status'] == 'incomplete' for states in result['countries'].values() for f in ('ipv4', 'ipv6'))
+        print(f"{args.output} : {len(result['countries'])} pays ; {incomplete} familles incomplètes omises (voir manifest.json)")
+        return 0 if incomplete == 0 else 1
     if len(sys.argv) > 1 and sys.argv[1] == 'compare-three':
         import json
         from .compare_three import compare_three

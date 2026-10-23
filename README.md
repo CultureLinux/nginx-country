@@ -30,6 +30,21 @@ La collecte vérifie les CIDR, les empreintes Git IPverse et le manifeste IPv4 I
 
 La comparaison vérifie les empreintes des règles et exige des politiques de génération identiques. Elle calcule l'intersection, l'union et les différences d'adresses, et distingue une famille absente d'une famille vide. Les comptes IPv6 sont des entiers exacts ; l'indice de Jaccard est une approximation décimale. Consulter `--help` après `generate` ou `compare` pour les options de chemins. Le [cadrage des sources](docs/cadrage-sources.md) décrit les limites de collecte et les conditions d'utilisation.
 
+## Construire les règles combinées
+
+```bash
+PYTHONPATH=src python3 -m nginx_country build-combined \
+  --geolite data/raw/geolite/GeoLite2-Country-CSV_20261020.zip
+```
+
+La commande crée `nginx-country/XX-allow.conf` et `nginx-country/XX-deny.conf` pour chaque code ISO du projet, ainsi qu'un `manifest.json` traçant les sources et les familles incomplètes. **Règle de construction**, par pays et famille :
+
+- `allow` contient l'**union** des couvertures IPverse, IPdeny et GeoLite : une adresse figure dans le fichier si au moins une source l'attribue au pays.
+- `deny` contient leur **intersection** : une adresse figure dans le fichier seulement si les trois sources l'attribuent au pays.
+- Si une famille manque dans au moins une source, elle est omise des deux fichiers ; le manifeste et l'en-tête indiquent `incomplete`. Une famille explicitement vide n'est pas une famille absente. La commande renvoie `1` si une famille est incomplète, même si elle a créé les fichiers.
+
+L'absence d'une famille peut laisser passer ou bloquer du trafic selon les autres directives Nginx ; examiner le manifeste avant utilisation. Aucun fichier n'ajoute `deny all`. L'ordre des directives Nginx reste déterminant. La sortie est expérimentale, n'est pas activée et ne constitue pas une preuve de localisation ; une source attribuant à tort une plage au pays peut élargir l'autorisation. Le jeu utilise GeoLite et les conditions de sa licence s'appliquent. Les fichiers générés sont ignorés par Git. Un répertoire existant non reconnu n'est jamais remplacé ; lors d'une nouvelle construction, l'ancien jeu reconnu est conservé dans un répertoire `.nginx-country-previous-*`.
+
 ## Comparer avec GeoLite
 
 La commande lit directement l'archive GeoLite Country CSV locale, sans l'extraire, et utilise `geoname_id` : le pays estimé de l'adresse, non le pays d'enregistrement. Elle traite les pays disponibles dans les trois sources ; les blocs sans pays identifiable restent dans l'archive et sont comptés comme inconnus. Une famille sans bloc pour un pays est indiquée absente, sans supposer une couverture vide.
