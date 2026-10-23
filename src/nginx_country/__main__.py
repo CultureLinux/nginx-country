@@ -6,6 +6,20 @@ from .fetch import collect, collect_all
 
 
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == 'compare':
+        import json
+        from .compare import compare_generations
+        parser = argparse.ArgumentParser(description='Comparer les générations IPverse et IPdeny')
+        parser.add_argument('--input', type=Path, default=Path('generated'))
+        parser.add_argument('--country', help='code pays ISO, par exemple FR')
+        args = parser.parse_args(sys.argv[2:])
+        try:
+            report = compare_generations(args.input, args.country)
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            print(f'comparaison impossible : {exc}', file=sys.stderr)
+            return 1
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+        return 0
     if len(sys.argv) > 1 and sys.argv[1] == 'generate':
         from .generate import generate_all
         parser = argparse.ArgumentParser(description='Génération expérimentale de règles Nginx')

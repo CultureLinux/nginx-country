@@ -1,6 +1,6 @@
 # nginx-country
 
-Outil Python en préparation pour récupérer et comparer les listes IP par pays d'IPverse et d'IPdeny, puis générer des règles Nginx. La collecte et la génération expérimentales sont disponibles ; la commande installable `nginx-country`, la comparaison et le déploiement restent à développer.
+Outil Python en préparation pour récupérer et comparer les listes IP par pays d'IPverse et d'IPdeny, puis générer des règles Nginx. La collecte et la génération expérimentales sont disponibles ; la commande installable `nginx-country`, le rapport historique et le déploiement restent à développer.
 
 ## Flux de traitement
 
@@ -12,13 +12,13 @@ IPverse ─┐
 IPdeny ──┘                              │
                                        ├─> normalisation des CIDR          [disponible]
                                        ├─> génération des règles Nginx    [disponible]
-                                       ├─> comparaison et rapports        [à développer]
+                                       ├─> comparaison JSON              [disponible]
                                        └─> validation et déploiement      [à développer]
 ```
 
 La collecte et la génération sont expérimentales. Elle télécharge les données de chaque source, vérifie leur structure et conserve les fichiers et leurs métadonnées. Une collecte complète réussie met à jour un lien par source ; en cas d'erreur, le lien précédent est conservé et l'autre source reste traitée. Ces liens désignent les données collectées : ils n'activent aucune configuration Nginx.
 
-La normalisation regroupe et trie les plages par pays et famille IP. La génération produit des fichiers `XX-allow.conf` et `XX-deny.conf` séparés par fournisseur. La comparaison permettra d'examiner les écarts avant de choisir explicitement une source. Enfin, la validation et le déploiement prévus devront tester la configuration Nginx et permettre un retour arrière ; le déploiement automatique restera désactivé par défaut.
+La normalisation regroupe et trie les plages par pays et famille IP. La génération produit des fichiers `XX-allow.conf` et `XX-deny.conf` séparés par fournisseur. La comparaison permet d'examiner les écarts avant de choisir explicitement une source. Enfin, la validation et le déploiement prévus devront tester la configuration Nginx et permettre un retour arrière ; le déploiement automatique restera désactivé par défaut.
 
 ## Prérequis
 
@@ -124,6 +124,29 @@ PYTHONPATH=src python3 -m nginx_country generate --input data/raw --output gener
 ```
 
 Par défaut `--special keep` conserve ces plages et les signale. La liste explicite utilisée est dans `src/nginx_country/normalize.py` ; elle couvre les principales plages privées, locales, documentaires et réservées, sans prétendre couvrir tous les registres de plages spéciales. Avec `exclude`, les intersections sont retirées et consignées dans le manifeste. Cette génération reste expérimentale et ne valide ni ne recharge Nginx.
+
+## Comparer les deux générations
+
+Pour comparer tous les pays des deux générations `latest` :
+
+```bash
+PYTHONPATH=src python3 -m nginx_country compare
+```
+
+Pour un pays précis ou un répertoire de générations différent :
+
+```bash
+PYTHONPATH=src python3 -m nginx_country compare --country FR
+PYTHONPATH=src python3 -m nginx_country compare --input generated --country FR
+```
+
+Le résultat JSON est affiché dans le terminal. Pour le conserver :
+
+```bash
+PYTHONPATH=src python3 -m nginx_country compare > comparaison.json
+```
+
+Par pays et famille, le résultat donne les nombres de préfixes et d'adresses, l'intersection, l'union, les couvertures propres à chaque source, l'indice de Jaccard et jusqu'à dix des plus grands CIDR exclusifs de chaque source. Les comptes sont des entiers exacts, y compris en IPv6 ; l'indice est une approximation décimale. Si l'union est vide, Jaccard vaut `null`. Une famille absente est indiquée comme telle et sa comparaison vaut `null`, sans supposer une couverture vide. La commande vérifie les empreintes des règles et exige la même politique de plages spéciales. Elle retourne un code non nul en cas de données absentes ou invalides. Le rapport historique et les exports Markdown restent à développer.
 
 ## Commandes de test
 
