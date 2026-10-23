@@ -6,6 +6,22 @@ from .fetch import collect, collect_all
 
 
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == 'compare-three':
+        import json
+        from .compare_three import compare_three
+        from zipfile import BadZipFile
+        parser = argparse.ArgumentParser(description='Comparer IPverse, IPdeny et GeoLite')
+        parser.add_argument('--input', type=Path, default=Path('generated'))
+        parser.add_argument('--geolite', type=Path, required=True)
+        parser.add_argument('--country', help='code pays ISO, par exemple FR')
+        args = parser.parse_args(sys.argv[2:])
+        try:
+            report = compare_three(args.input, args.geolite, args.country)
+        except (OSError, ValueError, KeyError, TypeError, BadZipFile) as exc:
+            print(f'comparaison impossible : {exc}', file=sys.stderr)
+            return 1
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+        return 0
     if len(sys.argv) > 1 and sys.argv[1] == 'compare':
         import json
         from .compare import compare_generations

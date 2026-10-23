@@ -30,6 +30,27 @@ La collecte vérifie les CIDR, les empreintes Git IPverse et le manifeste IPv4 I
 
 La comparaison vérifie les empreintes des règles et exige des politiques de génération identiques. Elle calcule l'intersection, l'union et les différences d'adresses, et distingue une famille absente d'une famille vide. Les comptes IPv6 sont des entiers exacts ; l'indice de Jaccard est une approximation décimale. Consulter `--help` après `generate` ou `compare` pour les options de chemins. Le [cadrage des sources](docs/cadrage-sources.md) décrit les limites de collecte et les conditions d'utilisation.
 
+## Comparer avec GeoLite
+
+La commande lit directement l'archive GeoLite Country CSV locale, sans l'extraire, et utilise `geoname_id` : le pays estimé de l'adresse, non le pays d'enregistrement. Elle traite les pays disponibles dans les trois sources ; les blocs sans pays identifiable restent dans l'archive et sont comptés comme inconnus. Une famille sans bloc pour un pays est indiquée absente, sans supposer une couverture vide.
+
+```bash
+PYTHONPATH=src python3 -m nginx_country compare-three \
+  --geolite data/raw/geolite/GeoLite2-Country-CSV_20261020.zip \
+  > data/comparaison-trois.json
+
+# Restreindre la sortie à un pays ; l'archive entière est lue.
+PYTHONPATH=src python3 -m nginx_country compare-three \
+  --geolite data/raw/geolite/GeoLite2-Country-CSV_20261020.zip --country FR
+
+# Produire les deux graphiques de comparaison à trois sources (Matplotlib requis).
+python scripts/plot_three.py --input data/comparaison-trois.json
+```
+
+Le rapport contient, pour chaque pays et famille, les trois comparaisons par paires et une partition de l'union : trois sources, exactement deux sources, ou une seule. Les comparaisons à trois exigent la politique de plages spéciales `keep` version 1 pour les générations existantes. Les nombres sont des comptes d'adresses exacts, pas des nombres de visiteurs. Une adresse non classée FR par une source peut être attribuée à un autre pays ou être inconnue : le rapport ne fait pas cette distinction. Le résultat est dans `data/`, ignoré par Git.
+
+Cette analyse utilise des données GeoLite créées par [MaxMind](https://www.maxmind.com), incluant des données [GeoNames](https://www.geonames.org) sous licence CC BY 4.0. L'utilisation et la redistribution de l'archive et des résultats dérivés sont soumises à la [licence GeoLite](https://www.maxmind.com/en/geolite/eula), notamment ses dispositions d'attribution et de mise à jour ; les conditions applicables doivent être examinées avant partage.
+
 ## Résultats statistiques et qualité des données
 
 **Instantané étudié :** comparaison des générations du 23 octobre 2026, politique `keep`, 249 pays ou territoires. Les identifiants des générations et l'empreinte du fichier d'entrée sont conservés dans [statistiques.json](docs/figures/statistiques.json). Ces résultats et les figures sont un instantané : ils ne changent pas automatiquement avec les prochaines collectes.
@@ -86,3 +107,23 @@ python scripts/statistics_report.py --input comparaison.json --output docs/figur
 ```
 
 Le script produit trois PNG et un fichier de statistiques avec l'empreinte de l'entrée. Il attend une comparaison complète incluant la France et ses deux familles comparables. Après une nouvelle exécution, actualiser aussi les chiffres et la date de cette section avant de publier le README.
+
+### Comparaison avec GeoLite — instantané du 20 octobre 2026
+
+L'archive GeoLite du 20 octobre est comparée aux générations IPverse et IPdeny du 23 octobre 2026. L'empreinte SHA-256 et les identifiants de génération figurent dans `data/comparaison-trois.json`. Les dates distinctes peuvent contribuer aux écarts. Les 1 344 blocs IPv4 et 918 blocs IPv6 GeoLite dont le pays estimé n'est pas identifiable ne sont attribués à aucun pays.
+
+| Jaccard médian par pays | IPv4 | IPv6 |
+|---|---:|---:|
+| IPverse / IPdeny | 90,54 % (240 pays) | 93,72 % (232) |
+| IPverse / GeoLite | 89,61 % (249) | 93,49 % (249) |
+| IPdeny / GeoLite | 87,49 % (240) | 99,47 % (232) |
+
+Chaque pays a le même poids. Les familles absentes sont exclues de la paire concernée ; la médiane ne mesure ni le trafic ni l'exactitude géographique.
+
+![Distribution des accords par paire et famille](docs/figures/trois-sources-accord.png)
+
+Pour **la France**, l'accord Jaccard vaut respectivement 89,34 %, 91,22 % et 88,22 % en IPv4, et 95,18 %, 95,16 % et 98,67 % en IPv6 pour les trois paires dans l'ordre du tableau. Parmi l'union des plages attribuées à la France par au moins une source, les trois en couvrent ensemble 84,93 % en IPv4 et 94,55 % en IPv6.
+
+![Couverture française des trois sources](docs/figures/trois-sources-france.png)
+
+Les zones exclusives ou attribuées par deux sources représentent des **désaccords d'attribution à la France**, pas des erreurs prouvées. Une majorité de sources ne constitue pas une référence indépendante ; il faut des adresses de localisation connue et représentatives du trafic pour estimer le risque de blocage de visiteurs réellement en France.
