@@ -31,3 +31,13 @@ Recherches documentaires effectuées le 23 octobre 2026. Ce document est un poin
 2. Tester les schémas et l'inventaire réels des deux fournisseurs, y compris les codes non ISO et familles absentes ; établir les règles de complétude sans confondre absence et échec.
 3. Fixer les seuils de variation et la politique des plages spéciales en fonction du contexte d'exploitation.
 4. Valider une méthode de configuration candidate sur une installation Nginx représentative, puis la procédure de rollback sur Rocky Linux 9.
+
+## Constat et contrôles de collecte exhaustive
+
+La collecte réelle du 23 octobre 2026 a fourni 253 fichiers IPverse, dont les codes non ISO `AN`, `CS`, `UK`, `YU`, ainsi que 243 zones IPv4 et 235 IPv6 IPdeny, dont les codes non ISO `AP`, `EU`, `ZZ`. Une famille absente de l'inventaire IPdeny est une absence publiée, pas un échec de téléchargement ; elle ne prouve pas une couverture vide. Les fichiers bruts sont conservés, avec une classification pays ISO ou catégorie spéciale dans les nouveaux manifestes. L'instantané ISO utilisé par le programme doit être maintenu lorsque le registre évolue.
+
+La zone IPv4 `AP` était vide. Le fichier `MD5SUM` publié par IPdeny indiquait l'empreinte du fichier vide ; cela confirme les octets publiés, pas l'absence réelle d'adresses. Cette exception est limitée à IPv4/AP et exige la correspondance avec le manifeste. Toutes les autres listes vides restent invalides. Le manifeste IPv4 entier doit correspondre à l'inventaire et chaque fichier à sa somme ; aucun manifeste IPv6 équivalent n'a été trouvé (HTTP 404). Les sommes MD5 du fournisseur servent au contrôle de cohérence, pas à authentifier les données.
+
+Pour IPverse, l'inventaire et les fichiers sont téléchargés à une même révision de commit, et leurs empreintes Git sont vérifiées. Pour chaque source, une disparition par rapport au dernier inventaire retenu bloque la mise à jour. Sans historique, la première collecte est explicitement signalée ; la présence de fichiers dans un inventaire ne garantit pas sa complétude réelle. Les variations de couverture et une éventuelle révision atomique d'IPdeny restent non vérifiées. Les anciennes collectes IPverse, avant fixation de la révision, ne bénéficient pas de ce contrôle.
+
+Vérification locale des données déjà recueillies : les 478 fichiers IPdeny ont passé la validation syntaxique et les 243 fichiers IPv4 correspondent au manifeste récupéré séparément ; les 253 JSON IPverse ont passé la validation syntaxique. Cette vérification rétrospective ne démontre pas une révision cohérente ni la complétude mondiale ; le jeu IPdeny précédent reste non promu.
