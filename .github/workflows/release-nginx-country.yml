@@ -1,0 +1,36 @@
+name: Publier nginx-country
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Créer l'archive des règles Nginx
+        id: archive
+        shell: bash
+        run: |
+          archive="nginx-country-${GITHUB_REF_NAME}.tar.gz"
+          tar --create --gzip --file "$archive" nginx-country
+          echo "path=$archive" >> "$GITHUB_OUTPUT"
+
+      - name: Créer la release GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          options=()
+          if [[ "$GITHUB_REF_NAME" == *-* ]]; then
+            options+=(--prerelease)
+          fi
+          gh release create "$GITHUB_REF_NAME" "${{ steps.archive.outputs.path }}" \
+            --title "$GITHUB_REF_NAME" --generate-notes "${options[@]}"
