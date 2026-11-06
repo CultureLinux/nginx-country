@@ -1,6 +1,6 @@
 {
   "format": "nginx-country-combined-v1",
-  "generated_at": "2026-10-23T14:15:20.240231+00:00",
+  "generated_at": "2026-11-06T12:40:02.230025+00:00",
   "policy": "keep",
   "rule": {
     "allow": "union",
@@ -8,12 +8,12 @@
   },
   "sources": {
     "ipverse": {
-      "generation": "generation-6a6d2023f8f4404ebb6d986792ba4e01",
-      "generated_at": "2026-10-23T13:27:53.437748+00:00"
+      "generation": "generation-0dbef62b8efc477a9774e3a1e5a74ff3",
+      "generated_at": "2026-11-06T12:35:12.891272+00:00"
     },
     "ipdeny": {
-      "generation": "generation-030b807248ea477382330aac4c8fffee",
-      "generated_at": "2026-10-23T13:28:07.259229+00:00"
+      "generation": "generation-50dd7f5dbcc14e4fa35efb2ef70d2a1f",
+      "generated_at": "2026-11-06T12:35:25.252161+00:00"
     }
   },
   "geolite": {
