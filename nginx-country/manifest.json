@@ -1,6 +1,6 @@
 {
   "format": "nginx-country-combined-v1",
-  "generated_at": "2026-11-23T09:35:10.693444+00:00",
+  "generated_at": "2026-11-23T10:40:14.468862+00:00",
   "policy": "keep",
   "rule": {
     "allow": "union",
@@ -8,21 +8,21 @@
   },
   "sources": {
     "ipverse": {
-      "generation": "generation-0dbef62b8efc477a9774e3a1e5a74ff3",
-      "generated_at": "2026-11-06T12:35:12.891272+00:00"
+      "generation": "generation-067074e0e0284f949359cac751b9e86d",
+      "generated_at": "2026-11-23T10:38:31.302467+00:00"
     },
     "ipdeny": {
-      "generation": "generation-50dd7f5dbcc14e4fa35efb2ef70d2a1f",
-      "generated_at": "2026-11-06T12:35:25.252161+00:00"
+      "generation": "generation-3d4029cf15e04c49a18ef280d5b64096",
+      "generated_at": "2026-11-23T10:38:45.754377+00:00"
     }
   },
   "geolite": {
-    "archive": "GeoLite2-Country-CSV_20261020.zip",
-    "sha256": "f3d2a8626e8f14cffa862f17f751307184bb605f6664ba0f8dbb62c58f561aa9",
+    "archive": "GeoLite2-Country-CSV_20261120.zip",
+    "sha256": "7cff66f5ce2426f1fd75560e4f9ff278dd032072bc96fdb91585408fd82a09ce",
     "country_field": "geoname_id",
     "unknown_blocks": {
-      "ipv4": 1344,
-      "ipv6": 918
+      "ipv4": 824,
+      "ipv6": 793
     }
   },
   "countries": {
