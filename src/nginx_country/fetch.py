@@ -1,4 +1,4 @@
-"""Collecte expérimentale de données par pays, sans promotion en production."""
+"""Collecte des données par pays (IPverse, IPdeny), sans promotion en production."""
 import datetime
 import hashlib
 import ipaddress

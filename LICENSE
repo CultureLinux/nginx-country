@@ -1,0 +1,95 @@
+nginx-country — licences
+========================
+
+Ce fichier regroupe la licence du code et les mentions applicables aux
+données de chaque fournisseur. Ce sont deux périmètres distincts.
+
+------------------------------------------------------------------------
+1. Code source (src/, tests/, scripts/, workflow, documentation) — MIT
+------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2026 CultureLinux
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+------------------------------------------------------------------------
+2. Données (répertoire nginx-country/) — licences des fournisseurs
+------------------------------------------------------------------------
+
+Les fichiers XX-allow.conf, XX-deny.conf et manifest.json sont des œuvres
+dérivées de données tierces. La licence MIT ci-dessus NE S'APPLIQUE PAS à ces
+données : chaque fournisseur conserve ses propres conditions, résumées
+ci-dessous. Le texte de référence est celui publié par le fournisseur (URL
+indiquées) ; ce résumé ne le remplace pas.
+
+2.1 IPverse — https://github.com/ipverse/geo-ip-blocks
+    Licence : CC0 1.0 Universal (dédicace au domaine public).
+    Texte : https://creativecommons.org/publicdomain/zero/1.0/legalcode
+    Aucune obligation ; l'attribution est néanmoins appréciée.
+
+2.2 IPdeny — https://www.ipdeny.com
+    Copyright (C) 2005-2014 IPDeny.com project. All Rights Reserved.
+    Notice : https://www.ipdeny.com/copyright.php (mise à jour le 29 août 2014)
+    Conditions de la notice, résumées :
+      - la redistribution des fichiers de zones est autorisée à condition de
+        joindre le fichier Copyrights.txt intact ;
+      - un lien vers https://www.ipdeny.com est bienvenu ; il est requis pour
+        un service web de géolocalisation IP fondé sur ces fichiers ;
+      - interdiction d'utiliser les données pour le spam, la publicité de
+        masse et les activités illégales ;
+      - l'utilisation du site est soumise aux Terms of Service et à la Fair
+        Usage Limits Policy (https://www.ipdeny.com/tos.php).
+    Mention : "Powered by IPDENY.COM IP database." — https://www.ipdeny.com
+    Les données d'IPdeny dérivent des bases des registres APNIC, ARIN, RIPE
+    NCC, LACNIC et AFRINIC, dont les mentions de copyright figurent sur la
+    page ci-dessus. Notamment : les données ARIN WHOIS et RIPE ne doivent pas
+    servir à la publicité, au marketing direct ni à des études de marché.
+    Point à clarifier : les conditions générales d'IPdeny contiennent une
+    formulation contraire à la notice sur la redistribution.
+
+2.3 GeoLite2 (MaxMind) — https://www.maxmind.com
+    GeoLite End User License Agreement (version du 12 février 2026) :
+    https://www.maxmind.com/en/geolite2/eula
+    Mention d'attribution obligatoire :
+      "This product includes GeoLite Data created by MaxMind, available from
+       https://www.maxmind.com."
+    Conditions du contrat, résumées :
+      - les éléments protégeables des données relèvent de la licence
+        Creative Commons Attribution-ShareAlike 4.0 International
+        (https://creativecommons.org/licenses/by-sa/4.0/) ;
+      - la communication des données à un tiers exige, sauf permission de la
+        licence Creative Commons, l'accord écrit préalable de MaxMind, et
+        l'imposition au tiers de conditions identiques ou similaires ;
+      - les anciennes versions des données doivent être détruites dans les 30
+        jours suivant la publication d'une mise à jour ;
+      - interdiction d'utiliser les données pour identifier un foyer, une
+        personne ou une adresse postale précise, et à des fins relevant de la
+        FCRA (crédit, assurance, emploi, etc.) ;
+      - aucune garantie de précision.
+    L'archive GeoLite elle-même n'est pas incluse dans ce dépôt (data/ est
+    ignoré) : chacun la télécharge avec son propre compte MaxMind.
+
+------------------------------------------------------------------------
+3. Avertissement
+------------------------------------------------------------------------
+
+La géolocalisation par adresse IP est indicative. Les fichiers fournis sont
+livrés sans garantie ; leur emploi peut bloquer des utilisateurs légitimes.

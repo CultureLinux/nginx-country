@@ -1,4 +1,4 @@
-"""Production de fichiers Nginx expérimentaux, sans activation."""
+"""Production des fichiers Nginx de chaque source, sans activation."""
 import datetime
 import hashlib
 import json

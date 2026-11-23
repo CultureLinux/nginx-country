@@ -16,7 +16,7 @@
 - Préserver et signaler les plages spéciales par défaut ; aucune exclusion silencieuse. Leur classification et leur éventuelle exclusion doivent reposer sur une politique explicite et configurable, documentée et testée.
 - Les fichiers `allow` et `deny` d'un pays doivent contenir les mêmes CIDR et ne jamais inclure `deny all`. Les CIDR documentaires sont réservés aux tests.
 - Aucun test réseau, Nginx, systemd ni serveur réel dans la suite unitaire ; les vérifications d'intégration sont séparées.
-- Le statut expérimental et les limites de complétude et de cohérence IPdeny restent visibles. La génération n'autorise pas un déploiement.
+- Les limites de complétude et de cohérence IPdeny restent visibles. La génération n'autorise pas un déploiement.
 
 ## 1. Lire et contrôler les jeux collectés
 
